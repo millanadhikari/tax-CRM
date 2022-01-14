@@ -3,14 +3,15 @@ import { Box, Flex, Image, Spacer, Text, IconButton, Input, InputGroup, InputLef
 import { ArrowLeftIcon, SettingsIcon, Search2Icon, DragHandleIcon } from '@chakra-ui/icons'
 import { theme } from '../theme'
 import SidebarMenu from './Menu/SidebarMenu'
+import SpaceAccordion from './Sidebar_Accordion/SpaceAccordion'
 
 
 const Sidebar = () => {
     return (
-        <Box w="300px" boxShadow='xs' h="100vh" borderColor="red">
+        <Box position="fixed" top="0" w="300px" boxShadow='xs' h="100vh" borderColor="red">
             <Flex p={5} alignItems="center">
                 <Flex alignItems="center">
-                    <Image src="https://app-cdn.clickup.com/assets/images/brand/clickup-symbol_color.svg" w={5} h={5} mr="2" />
+                    <Image src="https://app-cdn.clicakup.com/assets/images/brand/clickup-symbol_color.svg" w={5} h={5} mr="2" />
                     <Text fontWeight="bold" fontSize="1.3rem">CrmUp</Text>
                 </Flex>
                 <Spacer />
@@ -35,7 +36,12 @@ const Sidebar = () => {
                     backgroundColor="gray.100" aria-label='Search database' textAlign="center" size="sm" focusBorderColor='gray.100'
                     icon={<DragHandleIcon w={3} h={3} cursor="pointer" color="#7b68ee" size="sm" />} />
             </Flex>
+            <Box position="relative">
             <SidebarMenu />
+            </Box>
+            <Box position="absolute" top="450px" h="100vh">
+                <SpaceAccordion />
+            </Box>
         </Box>
     )
 }
