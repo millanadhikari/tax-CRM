@@ -39,6 +39,7 @@ const Sidebar = () => {
             <SidebarMenu />
             <Box mt="30rem">
             <SpaceAccordion/>
+            ok
 
             </Box>
         </Box>
