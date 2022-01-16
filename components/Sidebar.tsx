@@ -3,6 +3,7 @@ import { Box, Flex, Image, Spacer, Text, IconButton, Input, InputGroup, InputLef
 import { ArrowLeftIcon, SettingsIcon, Search2Icon, DragHandleIcon } from '@chakra-ui/icons'
 import { theme } from '../theme'
 import SidebarMenu from './Menu/SidebarMenu'
+import SpaceAccordion from './Sidebar_Accordion/SpaceAccordion'
 
 
 const Sidebar = () => {
@@ -36,6 +37,10 @@ const Sidebar = () => {
                     icon={<DragHandleIcon w={3} h={3} cursor="pointer" color="#7b68ee" size="sm" />} />
             </Flex>
             <SidebarMenu />
+            <Box mt="30rem">
+            <SpaceAccordion/>
+
+            </Box>
         </Box>
     )
 }
