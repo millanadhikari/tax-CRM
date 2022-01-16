@@ -38,9 +38,15 @@ const Sidebar = () => {
             </Flex>
             <Box position="relative">
             <SidebarMenu />
+
+            <Box mt="30rem">
+            <SpaceAccordion/>
+
+
             </Box>
             <Box position="absolute" top="450px" h="100vh">
                 <SpaceAccordion />
+
             </Box>
         </Box>
     )
