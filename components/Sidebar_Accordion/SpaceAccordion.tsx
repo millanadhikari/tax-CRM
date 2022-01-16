@@ -1,4 +1,8 @@
+
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Collapse, Input } from '@chakra-ui/react'
+
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Input } from '@chakra-ui/react'
+
 import { AddIcon, ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, SearchIcon } from '@chakra-ui/icons'
 import React, { useState } from 'react'
 import SpaceMenuAccordion from './SpaceMenuAccordion'
@@ -9,7 +13,9 @@ const SpaceAccordion = () => {
 
     const [searchSpace, setSearchSpace] = useState<boolean>(false)
     const [showSpace, setShowSpace] = useState<boolean>(false)
+
     const [showMenu, setShowMenu] = useState<boolean>(false)
+
 
     const [spaces, setSpaces] = useState<Space[]>([
         {
@@ -28,16 +34,25 @@ const SpaceAccordion = () => {
         console.log(spaces)
     }
     return (
+
         <Box w="300px" position="relative" h="full"   onMouseMove={() => setShowMenu(true)}
         onMouseOut={() => setShowMenu(false)}>
             <h2>
                 <Box _expanded={{ color: 'black' }} w="18.8rem"
                     color="gray.500" display="flex" px="4"
+
+        <Box w="300px" position="relative" h="full">
+            <h2>
+                <Box _expanded={{ color: 'black' }} w="18.8rem"
+                    color="gray.500" display="flex" px="4" 
+
                     borderTop="1px solid gray"
                     borderColor="gray.300"
                     py="12px"
                     onClick={() => setShowSpace(!showSpace)}
+
                     _hover={{backgroundColor:"gray.100"}}
+
                     cursor="pointer" >
                     <Box flex='1' textAlign='left' fontSize="sm" fontWeight="semibold" >
                         SPACES
@@ -45,21 +60,30 @@ const SpaceAccordion = () => {
                     <Box>
                         <SearchIcon mr="7px" _hover={{ color: "purple.500" }} onClick={() => setSearchSpace(!searchSpace)} />
                         {showSpace ? <ChevronDownIcon fontSize='xl' />
+
                             : <ChevronRightIcon fontSize='xl' onClick={() => setShowSpace(!showSpace)} />}
+
+                            : <ChevronRightIcon  fontSize='xl' onClick={() => setShowSpace(!showSpace)} />}
+
                     </Box>
                 </Box>
 
 
 
             </h2>
+
             <Collapse in={showSpace} animateOpacity>
                 <Box border="none" pt={2} >
+
+            {showSpace && <Box  border="none" pt={2} >
+
                 <Box
                     backgroundColor="gray.100"
                     p="2" textAlign="center" fontSize="xs" fontWeight="bold" color="gray.500"
                     cursor="pointer"
                     onClick={handleAdd}
                     mx="4"
+
                     _hover={{backgroundColor:"gray.200"}}
 
 
@@ -76,6 +100,25 @@ const SpaceAccordion = () => {
                 </Box>
             </Box>
             </Collapse>
+         
+                    
+                ><AddIcon fontSize="xs" mr="3"
+                    /> NEW SPACE
+
+                   
+                </Box>
+                <Box top="0" left="0" max-h="100%">
+                   {spaces.map((space) => (
+                        <SpaceMenuAccordion key={space._id} space={space} />
+
+                    ))}
+
+                    testing ho hai saathi ho 
+
+
+                   </Box>
+            </Box>}
+
 
             {/* <AccordionItem>
                 <h2>
