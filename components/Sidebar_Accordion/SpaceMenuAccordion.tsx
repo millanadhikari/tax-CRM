@@ -70,7 +70,7 @@ const SpaceMenuAccordion = ({ space, showMenu, setShowMenu }: Props) => {
             </Box>
 
             <Collapse in={projectsMenu} animateOpacity>
-                <Box onClick={handleFolder}> add folder
+                <Box onClick={handleFolder}> Add Folder +
                     {folders.map((folder) => (
                         <Folders key={folder._id} folder={folder} showMenu={showMenu} setShowMenu={setShowMenu} />
                     ))}</Box></Collapse>

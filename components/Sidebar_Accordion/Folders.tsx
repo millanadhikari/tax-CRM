@@ -23,10 +23,10 @@ const Folders = ({ folder, showMenu, setShowMenu }: Props) => {
             {showMenu &&
                 <Flex onMouseEnter={() => setShowMenu(true)}>
                     <Tooltip label={'Folder Settings'} placement='top'>
-                        <span> <FiMoreHorizontal />
+                        <span> d<FiMoreHorizontal />
                         </span>
                     </Tooltip>
-                    <Tooltip label='Create list or doc' placement='top'>
+                    <Tooltip label='Create List or Doc' placement='top'>
                         <AddIcon ml={3} fontSize='xs' />
                     </Tooltip>
                 </Flex>}
